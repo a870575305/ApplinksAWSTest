@@ -8,7 +8,7 @@
 window.onload = function () {
     var u = navigator.userAgent;
     if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) {
-         https://play.google.com/store/apps/details?id=jp.naver.line.android&hl=ja
+       window.location("intent://scan/#Intent;scheme=zxing;package=com.google.zxing.client.android;S.browser_fallback_url=http%3A%2F%2Fzxing.org;end");
     } else if (u.indexOf('iPhone') > -1) {
          alert("IOS");
     } 
