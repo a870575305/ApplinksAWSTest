@@ -3,19 +3,36 @@
 <head>
 <meta charset="utf-8">
 <title>Applinks Test</title>
+ 
+<script>
+window.onload = function () {
+    var u = navigator.userAgent;
+    if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) {//安卓手机
+    alert("安卓手机");
+    // window.location.href = "mobile/index.html";
+    } else if (u.indexOf('iPhone') > -1) {//苹果手机
+    // window.location.href = "mobile/index.html";
+    alert("苹果手机");
+    } else if (u.indexOf('Windows Phone') > -1) {//winphone手机
+    alert("winphone手机")
+    // window.location.href = "mobile/index.html";
+    }
+}
+</script>
+ 
+ 
 </head>
 <body>
-<br>
-<br>
-<br>
-<a href="https://deeplinktest0401.s3-ap-northeast-1.amazonaws.com/linktest?customerid=123&companyid=456&storeflg=789&birthday=qwe&gender=rty&hash=uio&key=asd/">Click HERE for url with slash</a>
-<br>
-<br>
-<br>
-<a href="https://deeplinktest0401.s3-ap-northeast-1.amazonaws.com/linktest?customerid=123&companyid=456&storeflg=789&birthday=qwe&gender=rty&hash=uio&key=asd">Click HERE for url, no slash</a>
-<br>
-<br>
-<br>
- <button type="button" onclick="showphone()">显示日期</button>
-  </body>
+ <br>
+ <br>
+ <br>
+    <a href="https://deeplinktest0401.s3-ap-northeast-1.amazonaws.com/linktest?customerid=123&companyid=456&storeflg=789&birthday=qwe&gender=rty&hash=uio&key=asd/">Click HERE for url with slash</a>
+ <br>
+ <br>
+ <br>
+    <a href="https://deeplinktest0401.s3-ap-northeast-1.amazonaws.com/linktest?customerid=123&companyid=456&storeflg=789&birthday=qwe&gender=rty&hash=uio&key=asd">Click HERE for url, no slash</a>
+ <br>
+ <br>
+ <br>
+ </body>
 </html>
