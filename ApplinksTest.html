@@ -6,11 +6,8 @@
  
 <script>
 window.onload = function () {
-    var query = window.location;
-    var query2 = window.location.search;
-    var query3 = window.location.search.substring(1);
-    alert(query+"|"+query2+"|"+query3);
-    
+    var query = window.location.search;
+    alert(query);
     var u = navigator.userAgent;
     if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) {
        var nowTime = new Date().valueOf();
@@ -24,7 +21,7 @@ window.onload = function () {
      var query = window.location;
      alert(query);
      //アプリに遷移する
-　　　　    window.location="xl://goods:8888/goodsDetail?p1=12312123&p2=100DJ&p3=0&p4=Q38Q4XQ8&p5=1&p6=ASDF1231414125123&p7=1aA123ZT20220401&p8=wesNTTD";
+　　　　    window.location="xl://goods:8888/goodsDetail"+query;
     }
 
 }
