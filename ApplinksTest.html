@@ -13,10 +13,15 @@ window.onload = function () {
 　　　　     setTimeout(function(){  
        　　　　var launchTime = new Date().valueOf() - nowTime;
       　　　　 if(launchTime < 28){
+              //ストアに遷移する
         　　　　    window.location = "https://play.google.com/store/apps/details?id=com.nttdata.hokenjpki.Android";
        　　　　}
 　　　  　  },25);
-　　　　    window.location="xl://goods:8888/goodsDetail?p1=12312123&p2=100DJ&p3=0&p4=Q38Q4XQ8&p5=1&p6=ASDF1231414125123&p7=1aA123ZT20220401&p8=wesNTTD“";
+      var url = "https://mynapocket.jp/MNP?p1=12312123&p2=100DJ&p3=0&p4=Q38Q4XQ8&p5=1&p6=ASDF1231414125123&p7=1aA123ZT20220401&p8=wesNTTD"
+ 
+      
+     //アプリに遷移する
+　　　　    window.location="xl://goods:8888/goodsDetail?p1=12312123&p2=100DJ&p3=0&p4=Q38Q4XQ8&p5=1&p6=ASDF1231414125123&p7=1aA123ZT20220401&p8=wesNTTD";
     }
 }
 </script>
