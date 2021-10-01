@@ -7,7 +7,9 @@
 <script>
 window.onload = function () {
     var query = window.location;
-    alert(query);
+    var query2 = window.location.search;
+    var query3 = window.location.search.substring(1);
+    alert(query+"|"+query2+"|"+query3);
     
     var u = navigator.userAgent;
     if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) {
