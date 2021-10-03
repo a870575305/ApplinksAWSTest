@@ -1,38 +1,50 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>Applinks Test</title>
- 
-<script>
-window.onload = function () {
-    var query = window.location.search;
-    var u = navigator.userAgent;
-    if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) {
-       var nowTime = new Date().valueOf();
-　　　　     setTimeout(function(){  
-       　　　　var launchTime = new Date().valueOf() - nowTime;
-      　　　　 if(launchTime < 280){
-              //ストアに遷移する
-        　　　　    window.location = "https://play.google.com/store/apps/details?id=com.nttdata.hokenjpki.Android";
-       　　　　}
-　　　  　  },250);
-     //アプリに遷移する
-　　　　    window.location="xl://goods:8888/MNP"+query;
-    }
 
-}
-</script>
+<head>
+   <meta charset="utf-8">
+   <title>マイナPocket</title>
+
+   <script>
+      window.onload = function () {
+         var query = window.location.search;
+         var u = navigator.userAgent;
+         if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) {
+            // Android
+            //window.location.href = 'https://play.google.com/store/apps/details?id=com.nttdata.hokenjpki.Android';
+            var nowTime = new Date().valueOf();
+            setTimeout(function () {
+               var launchTime = new Date().valueOf() - nowTime;
+               if (launchTime < 280) {
+                  //ストアに遷移する
+                  window.location = "https://play.google.com/store/apps/details?id=com.nttdata.hokenjpki.Android";
+               }
+            }, 250);
+            //アプリに遷移する
+            window.location = "mynapocket://mynapocket.jp/MNP" + query;
+         } else if (!!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)) {
+            // ios
+            window.location.href = 'https://itunes.apple.com/app/id1579280377';
+         }
+      }
+
+   </script>
 </head>
+
 <body>
-  <br>
- <a href="https://mynapocket.jp/MNP?p1=12312123&p2=100DJ&p3=0&p4=Q38Q4XQ8&p5=1&p6=ASDF1231414125123&p7=1aA123ZT20220401&p8=wesNTTD">Click HERE for url </a>
-  <br>
-   <br>
- <a href='intent://#Intent;action=android.intent.action.VIEW;scheme=googlechrome://navigate?url=https://mynapocket.jp/MNP?p1=12312123&p2=100DJ&p3=0&p4=Q38Q4XQ8&p5=1&p6=ASDF1231414125123&p7=1aA123ZT20220401&p8=wesNTTD;package=com.android.chrome;end'>test</a>
-  <br>
-   <br>
-   <br>
-   <br>
- </body>
+   <h2>スマートフォンからのアクセスの方</h2>
+   <p>遷移しない場合は、以下のリンクを押下してください。</p>
+   <div>
+      <a href='https://play.google.com/store/apps/details?id=com.nttdata.hokenjpki.Android'>Androidの方はこちら</a>
+   </div>
+   <div>
+      <a href='https://itunes.apple.com/app/id1579280377'>iOSの方はこちら</a>
+   </div>
+   <div>
+      <h2>PCの方</h2>
+      <p>お手数をおかけしますが、AndroidまたはiOSスマートフォンでのアクセスをお願いいたします。</p>
+   </div>
+
+</body>
+
 </html>
