@@ -7,19 +7,19 @@
 
    <script>
       window.onload = function () {
-         var query = window.location.search;
-         var u = navigator.userAgent;
+         //var query = window.location.search;
+         // var u = navigator.userAgent;
          if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) {
             // Android
             //window.location.href = 'https://play.google.com/store/apps/details?id=com.nttdata.hokenjpki.Android';
-            var nowTime = new Date().valueOf();
-            setTimeout(function () {
-               var launchTime = new Date().valueOf() - nowTime;
-               if (launchTime < 280) {
+            // var nowTime = new Date().valueOf();
+            // setTimeout(function () {
+              //  var launchTime = new Date().valueOf() - nowTime;
+              //  if (launchTime < 280) {
                   //ストアに遷移する
-                  window.location = "https://play.google.com/store/apps/details?id=com.nttdata.hokenjpki.Android";
-               }
-            }, 250);
+              //     window.location = "https://play.google.com/store/apps/details?id=com.nttdata.hokenjpki.Android";
+              //  }
+            // }, 250);
             //アプリに遷移する
             window.location = "mynapocket://mynapocket.jp/MNP" + query;
          } else if (!!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)) {
