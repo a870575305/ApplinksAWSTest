@@ -7,7 +7,8 @@
 
    <script>
       window.onload = function () {
-         //var query = window.location.search;
+         var query = window.location.search;
+          alert(query);
          // var u = navigator.userAgent;
          if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) {
             // Android
@@ -21,7 +22,6 @@
               //  }
             // }, 250);
             //アプリに遷移する
-            alert(query);
             window.location.href = "mynapocket://mynapocket.jp/MNP" + query;
          } else if (!!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)) {
             // ios
