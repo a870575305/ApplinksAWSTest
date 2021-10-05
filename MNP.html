@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="utf-8">
+   <title>マイナPocket</title>
+
+   <script>
+      window.onload = function () {
+         var query = window.location.search;
+         var u = navigator.userAgent;
+         var target = document.getElementById("customURLTarget");
+         if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) {
+            // Android
+            //window.location.href = 'https://play.google.com/store/apps/details?id=com.nttdata.hokenjpki.Android';
+            target.href = 'mynapocket://mynapocket.jp/MNP' + query
+            var nowTime = new Date().valueOf();
+            setTimeout(function () {
+               var launchTime = new Date().valueOf() - nowTime;
+               if (launchTime < 280) {
+                  //ストアに遷移する
+                  window.location = "https://play.google.com/store/apps/details?id=com.nttdata.hokenjpki.Android";
+               }
+            }, 250);
+            //アプリに遷移する
+            window.location = "mynapocket://mynapocket.jp/MNP" + query;
+         } else if (!!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)) {
+            // ios
+            target.href = 'https://mynapocket.jp/MNP' + query
+            window.location.href = 'https://itunes.apple.com/app/id1579280377';
+         }
+      }
+
+   </script>
+</head>
+
+<body>
+   <h2>スマートフォンからのアクセスの方</h2>
+   <p>アプリをまだインストールしていない方は、以下のリンクを押下してください。</p>
+   <div>
+      <a href='https://play.google.com/store/apps/details?id=com.nttdata.hokenjpki.Android'>Androidの方はこちら</a>
+   </div>
+   <div>
+      <a href='https://itunes.apple.com/app/id1579280377'>iOSの方はこちら</a>
+   </div>
+   <p>
+      アプリをインストールされている方は、以下のリンクを押下してください。
+   </p>
+   <div>
+      <a id='customURLTarget' href='https://mynapocket.jp/MNP'>アプリを起動</a>
+   </div>
+   <div>
+      <h2>PCの方</h2>
+      <p>お手数をおかけしますが、AndroidまたはiOSスマートフォンでのアクセスをお願いいたします。</p>
+   </div>
+
+   <script>
+
+   </script>
+</body>
+
+</html>
