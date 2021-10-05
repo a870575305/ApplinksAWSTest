@@ -14,6 +14,8 @@
             // Android
             //window.location.href = 'https://play.google.com/store/apps/details?id=com.nttdata.hokenjpki.Android';
             target.href = 'mynapocket://mynapocket.jp/MNP' + query
+            //アプリに遷移する
+            window.location = "mynapocket://mynapocket.jp/MNP" + query;
             var nowTime = new Date().valueOf();
             setTimeout(function () {
                var launchTime = new Date().valueOf() - nowTime;
@@ -22,8 +24,6 @@
                   window.location = "https://play.google.com/store/apps/details?id=com.nttdata.hokenjpki.Android";
                }
             }, 250);
-            //アプリに遷移する
-           // window.location = "mynapocket://mynapocket.jp/MNP" + query;
          } else if (!!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)) {
             // ios
             target.href = 'https://mynapocket.jp/MNP' + query
